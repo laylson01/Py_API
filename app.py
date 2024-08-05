@@ -17,7 +17,7 @@ musics = [
  
 {   
    "id": 3,
-       "musica" : "Moonlight",
+   "musica" : "Moonlight",
    "cantor" : "Víper",
 },  
 ]
@@ -29,16 +29,27 @@ def obt_music ():
    return jsonify(musics)
 
 #Função Consultar p/ID
-@app.route("/musics/<int:id>",methods=["GET"] )
+
+
+
+@app.route ("/musics/<int:id>", methods = ["GET"])
+
 
 def consult_music_id(id):
-   for musica in musics:
-      if musica.get ("id") == id:
-       return jsonify(musica)
-
-
-
-
+   for msc in musics:
+      if msc.get("id") == id:
+         return jsonify(msc)
 
 
 app.run(port=4000, host="localhost", debug=True) #Config para acesssar localmente.
+
+
+'''
+Test Cantor
+@app.route("/musics/<string:cantor>",methods=["GET"] )
+
+def consult_music_id(cantor):
+   for msc in musics:
+      if msc.get("cantor") == cantor:
+         return jsonify(msc)
+'''
