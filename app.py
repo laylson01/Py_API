@@ -24,5 +24,4 @@ musica = [
    "musica" : "Moonlight",
    "cantor" : "Víper",
 },
-
 ]
