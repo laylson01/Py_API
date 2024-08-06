@@ -29,10 +29,8 @@ def obt_music ():
 def consult_music_id(id):
    for msc in musics:
       if msc.get("id") == id:
-         return jsonify(msc)
-      
-      
-      
+         return jsonify(msc)    
+            
 ##Função editar usando ID / Indice
 @app.route ("/musics/<int:id>", methods = ["PUT"])
 def edit_music_id(id):
@@ -58,25 +56,7 @@ def del_music(id):
          del musics [indice]
          return jsonify(musics)
       
-
-
-
-
-
 app.run(port=4000, host="localhost", debug=True) #Config para acesssar localmente.
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 '''
 Test Cantor
