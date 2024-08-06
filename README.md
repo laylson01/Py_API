@@ -98,7 +98,52 @@ Para instalar e executar este projeto, siga os seguintes passos:
         "cantor": "Novo Cantor"
     }
     ```
+### Adicionar nova musica
 
+- **Endpoint:** `/musics/`
+- **Method:** POST
+- **Description:** Add a new music record.
+
+    **Request Body:**
+    ```json
+    {
+        "id": 4,
+        "musica": "New Song",
+        "cantor": "New Artist"
+    }
+    ```
+
+    **Response:**
+    ```json
+    [
+        {
+            "id": 4,
+        "musica": "New Song",
+        "cantor": "New Artist"
+        },
+    ]
+    ```
+
+    5. Delete Music Record by ID
+
+- **Endpoint:** `/musics/<id>`
+- **Method:** DELETE
+- **Description:** Delete a specific music record by its ID.
+
+    **Response:**
+    ```json
+    [
+        {
+            "id": 1,
+            "musica": "Carry On",
+            "cantor": "Angra"
+        },
+      
+     
+    ]
+
+    
+    ```
 ## Testar com Cantor (Comentado no Código)
 
 Há um trecho comentado no código para testar a consulta de música pelo nome do cantor:
