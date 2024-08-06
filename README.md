@@ -23,7 +23,6 @@ Para instalar e executar este projeto, siga os seguintes passos:
     ```bash
     pip install Flask
     ```
-
 ## Como usar
 
 1. Inicie o servidor Flask:
@@ -33,7 +32,6 @@ Para instalar e executar este projeto, siga os seguintes passos:
 2. O servidor estará rodando em `http://localhost:4000`.
 
 ## Endpoints
-
 ### Obter todas as músicas
 
 - **URL:** `/musics`
@@ -59,9 +57,7 @@ Para instalar e executar este projeto, siga os seguintes passos:
         }
     ]
     ```
-
 ### Consultar uma música por ID
-
 - **URL:** `/musics/<int:id>`
 - **Método:** `GET`
 - **Descrição:** Retorna uma música específica pelo ID.
@@ -77,7 +73,6 @@ Para instalar e executar este projeto, siga os seguintes passos:
     ```
 
 ### Editar uma música por ID
-
 - **URL:** `/musics/<int:id>`
 - **Método:** `PUT`
 - **Descrição:** Edita uma música específica pelo ID.
@@ -99,11 +94,9 @@ Para instalar e executar este projeto, siga os seguintes passos:
     }
     ```
 ### Adicionar nova musica
-
 - **Endpoint:** `/musics/`
 - **Method:** POST
 - **Description:** Add a new music record.
-
     **Request Body:**
     ```json
     {
@@ -112,7 +105,6 @@ Para instalar e executar este projeto, siga os seguintes passos:
         "cantor": "New Artist"
     }
     ```
-
     **Response:**
     ```json
     [
@@ -123,13 +115,10 @@ Para instalar e executar este projeto, siga os seguintes passos:
         },
     ]
     ```
-
-    5. Delete Music Record by ID
-
+   Delete Music Record by ID
 - **Endpoint:** `/musics/<id>`
 - **Method:** DELETE
 - **Description:** Delete a specific music record by its ID.
-
     **Response:**
     ```json
     [
@@ -140,12 +129,9 @@ Para instalar e executar este projeto, siga os seguintes passos:
         },
       
      
-    ]
-
-    
+    ]    
     ```
 ## Testar com Cantor (Comentado no Código)
-
 Há um trecho comentado no código para testar a consulta de música pelo nome do cantor:
 
 ```python
@@ -155,22 +141,14 @@ def consult_music_cantor(cantor):
         if msc.get("cantor") == cantor:
             return jsonify(msc)
 ```
-
 Para ativar esse teste, descomente o código e ajuste conforme necessário.
-
 ## Configuração
-
 - O servidor Flask está configurado para rodar localmente na porta 4000.
 - Debug mode está ativado para facilitar o desenvolvimento e a depuração.
-
 ```python
 app.run(port=4000, host="localhost", debug=True)
 ```
-
 ## Contribuição
-
 Sinta-se à vontade para contribuir com este projeto enviando pull requests ou abrindo issues no repositório.
-
 ## Licença
-
 Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para obter mais informações.
