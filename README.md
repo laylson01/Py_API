@@ -1,4 +1,4 @@
-# Music API
+# Music API (Basic API)
 
 Este projeto é uma API simples desenvolvida em Flask para gerenciar uma lista de músicas. A API permite obter a lista de músicas, consultar uma música por ID, e editar uma música por ID.
 
